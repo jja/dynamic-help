@@ -1,0 +1,175 @@
+import org.apache.log4j.DailyRollingFileAppender
+// locations to search for config files that get merged into the main config
+// config files can either be Java properties files or ConfigSlurper scripts
+
+// grails.config.locations = [ "classpath:${appName}-config.properties",
+//                             "classpath:${appName}-config.groovy",
+//                             "file:${userHome}/.grails/${appName}-config.properties",
+//                             "file:${userHome}/.grails/${appName}-config.groovy"]
+
+// if(System.properties["${appName}.config.location"]) {
+//    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
+// }
+grails.views.javascript.library="jquery"
+
+grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
+grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
+grails.mime.use.accept.header = false
+grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
+                      xml: ['text/xml', 'application/xml'],
+                      text: 'text/plain',
+                      js: 'text/javascript',
+                      rss: 'application/rss+xml',
+                      atom: 'application/atom+xml',
+                      css: 'text/css',
+                      csv: 'text/csv',
+                      all: '*/*',
+                      json: ['application/json','text/json'],
+                      form: 'application/x-www-form-urlencoded',
+                      multipartForm: 'multipart/form-data'
+                    ]
+// The default codec used to encode data with ${}
+grails.views.default.codec="none" // none, html, base64
+grails.views.gsp.encoding="UTF-8"
+grails.converters.encoding="UTF-8"
+// enable Sitemesh preprocessing of GSP pages
+grails.views.gsp.sitemesh.preprocess = true
+// scaffolding templates configuration
+grails.scaffolding.templates.domainSuffix = 'Instance'
+
+// Set to false to use the new Grails 1.2 JSONBuilder in the render method
+grails.json.legacy.builder=false
+// enabled native2ascii conversion of i18n properties files
+grails.enable.native2ascii = true
+// whether to install the java.util.logging bridge for sl4j. Disable fo AppEngine!
+grails.logging.jul.usebridge = true
+// packages to include in Spring bean scanning
+grails.spring.bean.packages = []
+
+// set per-environment serverURL stem for creating absolute links
+environments {
+    production {
+        grails.serverURL = "http://www.changeme.com"
+    }
+    development {
+        grails.serverURL = "http://localhost:8080/${appName}"
+    }
+    test {
+        grails.serverURL = "http://localhost:8080/${appName}"
+    }
+
+}
+
+// log4j configuration
+/*
+
+log4j =  {
+   appenders {
+     rollingFile name:'energyScorecards', file:"energyScorecards.log", maxFileSize:'10000KB', layout:pattern(conversionPattern:'[%r] %d{ABSOLUTE} %5p %c{1}:%L - %m%n' )
+     'null' name:'stacktrace'
+   }
+  info 'grails.app'
+  debug 'grails.app.service'
+  debug 'grails.app.controller'
+   root {
+     info 'energyScorecards', 'stdout'
+     additivity = true
+   }
+  error stdout:"StackTrace"
+
+}
+
+*/
+//OLD log4j configuration
+// log4j configuration
+
+
+  /*
+  appender.stdout = "org.apache.log4j.ConsoleAppender"
+  appender.'stdout.layout' = "org.apache.log4j.PatternLayout"
+  appender.'stdout.layout.ConversionPattern' = '[%r] %c{2} %m%n'
+
+  appender.stacktraceLog = "org.apache.log4j.FileAppender"
+  appender.'stacktraceLog.layout' = "org.apache.log4j.PatternLayout"
+  appender.'stacktraceLog.layout.ConversionPattern' = '[%r] %c{2} %m%n'
+  appender.'stacktraceLog.File' = "stacktrace1.log"
+  rootLogger = "error,stdout"
+  */
+
+
+//def isPerf4Installed = org.codehaus.groovy.grails.plugins.PluginManagerHolder.currentPluginManager().hasGrailsPlugin("perf4j")
+def isPerf4Installed = false
+
+
+log4j = {
+  debug = true
+  error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
+          'org.codehaus.groovy.grails.web.pages', //  GSP
+          'org.codehaus.groovy.grails.web.sitemesh', //  layouts
+          'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+          'org.codehaus.groovy.grails.web.mapping', // URL mapping
+          //'org.codehaus.groovy.grails.commons', // core / classloading
+          'org.codehaus.groovy.grails.plugins', // plugins
+          'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
+          'org.grails.plugins.excelimport',
+          'org.springframework',
+          'org.hibernate',
+          'org.grails.plugins',
+          'esc',
+          'grails.app'
+  warn   'org.mortbay.log',
+          'org.codehaus.groovy.grails.plugins', // plugins
+          'org.grails.plugins.excelimport',
+          'org.hibernate',
+          'org.grails.plugins',
+          'grails.app',
+          'esc'
+  info    'grails.app.service.grails.buildtestdata.BuildTestDataService' ,
+           'org.grails.plugins.excelimport',
+          //'org.codehaus.groovy.grails.commons',
+          //'org.codehaus.groovy.grails.plugins', // plugins
+          'grails.app',
+          'org.grails.plugins',
+          'esc'
+  //, 'grails.buildtestdata.DomainInstanceBuilder'
+  debug 'grails.app.services',
+    //, 'org.grails.plugins.excelimport'
+  //'grails.app.service.grails.buildtestdata.BuildTestDataService',
+     //'grails.app'
+  //, 'grails.util'
+  'org.codehaus.groovy.grails.commons'
+  //,  'org.codehaus.groovy.grails.plugins' // plugins
+  //, 'grails.buildtestdata.DomainInstanceBuilder'
+  //, 'grails.buildtestdata.handler'
+  //trace  'org.hibernate.type'
+  
+
+
+  // Example of changing the log pattern for the default console
+  // appender:
+  //
+  //appenders {
+  //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+  //}
+
+
+  appenders {
+    console name:'stdout', layout: pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss,SSS} %5p %c{1} - %m%n')
+    file name:"mainlog", file:"logs/energyscorecards.log"
+  }
+  
+  if (isPerf4Installed) {
+  info performanceStatsAppender: 'org.perf4j.TimingLogger'
+  }
+
+    root {
+    if (isPerf4Installed) { info performanceStatsAppender: 'org.perf4j.TimingLogger' }
+    //trace 'mainlog'
+    debug 'mainlog'
+    info 'mainlog' //, 'dailyAppender'
+    error 'stdout', 'mainlog'
+    warn 'stdout', 'mainlog'
+    additivity = true
+  }
+
+}

@@ -1,0 +1,11 @@
+DefaultPackage
+grails-app.conf
+grails-app.controllers.org.grails.plugins.dynamichelp
+grails-app.domain.org.grails.plugins.dynamichelp
+grails-app.taglib.org.grails.plugins.dynamichelp
+scripts
+test.projects.sample.grails-app.conf
+test.projects.sample.grails-app.conf.spring
+test.projects.sample.grails-app.controllers.com.sample
+test.projects.sample.grails-app.domain.com.sample
+test.projects.sample.test.unit.org.grails.plugins.dynamichelp
