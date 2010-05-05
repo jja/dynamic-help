@@ -7,7 +7,7 @@ class HelpTipBootStrap {
     println "Bootstrapping Help Tips"
 
     if (!HelpTip.list()) {
-      new HelpTip(controller:'book',tipSelector:"name", tipTitle:"Book Name", tipDescription:'Enter Name of Book').save()
+      new HelpTip(url:'book',tipSelector:"#name", tipTitle:"Book Name", tipDescription:'Enter Name of Book').save()
 
       def longDescription = """<p>Enter Author Name</p>
   <ul> 
@@ -16,7 +16,7 @@ class HelpTipBootStrap {
   </ul>
   <p>End of Description</p>
   """
-      new HelpTip(controller:'book',tipSelector:"authorName", tipTitle:"Author Name", tipDescription:longDescription).save()
+      new HelpTip(url:'book',tipSelector:"#authorName", tipTitle:"Author Name", tipDescription:longDescription).save()
     }
 
   }

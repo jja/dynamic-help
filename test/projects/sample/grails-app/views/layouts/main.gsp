@@ -4,8 +4,9 @@
         <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
         <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
         <g:javascript library="jquery"/> 
+        <jqui:resources  theme="custom" />
         <g:layoutHead />
-        <g:helpTips controller="$controllerName" includeJQuery="${false}"/>
+        <g:helpTips url="$controllerName" includeJQuery="${false}" includeJQueryUI="${false}"/>
        <%--  <g:javascript library="application" />--%>
     </head>
     <body>

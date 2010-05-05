@@ -1,4 +1,4 @@
-<plugin name='dynamic-help' version='0.2' grailsVersion='1.2.2 &gt; *'>
+<plugin name='dynamic-help' version='0.3' grailsVersion='1.2.2 &gt; *'>
   <author>Jean Barmash</author>
   <authorEmail>jean.barmash@gmail.com</authorEmail>
   <title>Dynamically add help messages that are editable</title>

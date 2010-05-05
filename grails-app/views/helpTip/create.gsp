@@ -43,11 +43,19 @@
                                 <td valign="top" class="name">
                                     <label for="controller"><g:message code="helpTip.controller.label" default="Controller" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: helpTipInstance, field: 'controller', 'errors')}">
-                                    <g:textField name="controller" value="${helpTipInstance?.controller}" />
+                                <td valign="top" class="value ${hasErrors(bean: helpTipInstance, field: 'url', 'errors')}">
+                          <g:select optionKey="logicalPropertyName" optionValue="name" from="${grailsApplication.controllerClasses.sort{it.name}}" name="url" value="${helpTipInstance?.url}" ></g:select>
                                 </td>
                             </tr>
-                        
+    <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="url"><g:message code="helpTip.url.label" default="Published" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: helpTipInstance, field: 'published', 'errors')}">
+                                    <g:checkBox name="published" value="${helpTipInstance?.published}" />
+                                </td>
+                            </tr>
+                       
                             
                             <tr class="prop">
                                 <td valign="top" class="name">

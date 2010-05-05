@@ -3,15 +3,17 @@ package org.grails.plugins.dynamichelp
 class HelpTip {
 
     static constraints = {
-	   controller(nullable:true)
+	   url()
+	   published()
 	   tipSelector()
 	   tipTitle()
-	   tipDescription(widget:'textarea')
+	   tipDescription(widget:'textarea', maxSize:10000)
     }
 
-	 String controller
+	 String url
 	 String tipSelector
 	 String tipTitle
 	 String tipDescription
+	 boolean published = true
 
 }

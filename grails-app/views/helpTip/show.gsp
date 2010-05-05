@@ -24,11 +24,14 @@
                             <td valign="top" class="name"><g:message code="helpTip.id.label" default="Id" /></td>
                             <td valign="top" class="value">${fieldValue(bean: helpTipInstance, field: "id")}</td>
                         </tr>
-                    
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="helpTip.controller.label" default="Controller" /></td>
+                            <td valign="top" class="name"><g:message code="helpTip.published.label" default="Published" /></td>
+									  <td valign="top" class="value"> <g:checkBox disabled="disabled" name="published" value="${helpTipInstance?.published}" />  </td>
+                        </tr>
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="helpTip.url.label" default="Controller" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: helpTipInstance, field: "controller")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: helpTipInstance, field: "url")}</td>
                             
                         </tr>
                         <tr class="prop">
@@ -43,10 +46,9 @@
                         
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helpTip.tipDescription.label" default="Tip Description" /></td>
-                            
                             <td valign="top" class="value">${fieldValue(bean: helpTipInstance, field: "tipDescription")}</td>
-                            
                         </tr>
+                    
                     
                     </tbody>
                 </table>
