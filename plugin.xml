@@ -7,9 +7,7 @@ This plugin is designed as a mini-cms for help, so nondevelopers can maintain he
 </description>
   <documentation>http://grails.org/plugin/dynamic-help</documentation>
   <resources>
-    <resource>BuildConfig</resource>
-    <resource>DataSource</resource>
-    <resource>UrlMappings</resource>
+    <resource>HelpTipPluginBootStrap</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTipController</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTip</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTipTagLib</resource>
