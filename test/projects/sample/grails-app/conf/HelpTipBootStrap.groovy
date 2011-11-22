@@ -6,7 +6,7 @@ class HelpTipBootStrap {
 
     println "Bootstrapping Help Tips"
 
-    if (!HelpTip.list()) {
+    if (!HelpTip.findByUrl('book')) {
       new HelpTip(url:'book',tipSelector:"#name", tipTitle:"Book Name", tipDescription:'Enter Name of Book').save()
 
       def longDescription = """<p>Enter Author Name</p>

@@ -1,21 +1,18 @@
-<plugin name='dynamic-help' version='0.3' grailsVersion='1.2.2 &gt; *'>
-  <author>Jean Barmash</author>
-  <authorEmail>jean.barmash@gmail.com</authorEmail>
+<plugin name='dynamic-help' version='0.4' grailsVersion='1.2.2 &gt; *'>
+  <author>Jean Barmash, John Allison</author>
+  <authorEmail>jja@sinequanon.net</authorEmail>
   <title>Dynamically add help messages that are editable</title>
   <description>\
 This plugin is designed as a mini-cms for help, so nondevelopers can maintain help throughout the site.  It injects help tips into pages by defining help tips domain obects.   Designed to be completely unobtrusive (dynamically adds the code through ajax, and only where help exists).   
 </description>
-  <documentation>http://grails.org/plugin/dynamic-help</documentation>
+  <documentation>https://github.com/jja/dynamic-help/blob/master/README</documentation>
   <resources>
     <resource>HelpTipPluginBootStrap</resource>
+    <resource>UrlMappings</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTipController</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTip</resource>
     <resource>org.grails.plugins.dynamichelp.HelpTipTagLib</resource>
   </resources>
-  <dependencies>
-    <resolvers>
-      <resolver type='grailsPlugins' name='grailsPlugins' />
-    </resolvers>
-  </dependencies>
+  <dependencies />
   <behavior />
 </plugin>

@@ -10,14 +10,14 @@ class HelpTipTagLib {
       if (helpTips) {
         //println "${attrs.includeJQuery}"
         if (attrs.includeJQuery==null || attrs.includeJQuery==true) {
-          out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/jquery-1.3.2.js" ) + "\"></script>"
+          out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/jquery-1.7.min.js" ) + "\"></script>"
         }
         if (attrs.includeJQueryUI==null || attrs.includeJQueryUI==true) {
-          out << "<link rel='stylesheet' href=\"" + resource(dir: pluginContextPath, file: "/css/jquery/jquery-ui-1.7.2.custom.css" ) + "\"/>"
-          out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/jquery-ui-1.7.2.js" ) + "\"></script>"
+          out << "<link rel='stylesheet' href=\"" + resource(dir: pluginContextPath, file: "/css/jquery/jquery-ui-1.8.15.custom.css" ) + "\"/>"
+          out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/jquery-ui-1.8.15.custom.min.js" ) + "\"></script>"
 		  }
         out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/jquery.bt.custom.js" ) + "\"></script>"
-        out << "<link rel='stylesheet' href=\"" + resource(dir: pluginContextPath, file: "/css/famfamfam.css" ) + "\"/>"
+        out << "<link rel='stylesheet' href=\"" + resource(dir: pluginContextPath, file: "/css/dynamichelp.css" ) + "\"/>"
         out << "<script type=\"text/javascript\" src=\"" + resource(dir: pluginContextPath, file: "/js/jquery/dynamichelp.js" ) + "\"></script>"
         out << '<script type="text/javascript">\n'
         helpTips.each {

@@ -1,6 +1,6 @@
 class DynamicHelpGrailsPlugin {
     // the plugin version
-    def version = "0.3"
+    def version = "0.4"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2.2 > *"
     // the other plugins this plugin depends on
@@ -13,15 +13,17 @@ class DynamicHelpGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def author = "Jean Barmash"
-    def authorEmail = "jean.barmash@gmail.com"
+    def author = "Jean Barmash, John Allison"
+    //def authorEmail = "jean.barmash@gmail.com"
+    def authorEmail = "jja@sinequanon.net"
     def title = "Dynamically add help messages that are editable"
     def description = '''\\
 This plugin is designed as a mini-cms for help, so nondevelopers can maintain help throughout the site.  It injects help tips into pages by defining help tips domain obects.   Designed to be completely unobtrusive (dynamically adds the code through ajax, and only where help exists).   
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/dynamic-help"
+    //def documentation = "http://grails.org/plugin/dynamic-help"
+    def documentation = "https://github.com/jja/dynamic-help/blob/master/README"
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
