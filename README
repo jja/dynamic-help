@@ -18,5 +18,12 @@ in your app, run:
     grails install-plugin grails-dynamic-help-VERSION.zip
 
 
+NOTES
+
+Note that the jquery-ui plugin is broken and ignores themeDir and can't find your theme
+in the documented place, always looking inside the plugin. The default theme has a transparent
+background that doesn't work well with the pop-up tip boxes. So either let dynamic-help
+include jquery-ui or manage your own styles-- don't rely on jquery-ui's css.
+
 John Allison
 jja@sinequanon.net

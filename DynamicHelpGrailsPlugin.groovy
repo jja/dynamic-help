@@ -22,8 +22,8 @@ This plugin is designed as a mini-cms for help, so nondevelopers can maintain he
 '''
 
     // URL to the plugin's documentation
-    //def documentation = "http://grails.org/plugin/dynamic-help"
-    def documentation = "https://github.com/jja/dynamic-help/blob/master/README"
+    def documentation = "http://grails.org/plugin/dynamic-help"
+    //def documentation = "https://github.com/jja/dynamic-help/blob/master/README"
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
