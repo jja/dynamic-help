@@ -5,7 +5,7 @@
   <description>\
 This plugin is designed as a mini-cms for help, so nondevelopers can maintain help throughout the site.  It injects help tips into pages by defining help tips domain obects.   Designed to be completely unobtrusive (dynamically adds the code through ajax, and only where help exists).   
 </description>
-  <documentation>https://github.com/jja/dynamic-help/blob/master/README</documentation>
+  <documentation>http://grails.org/plugin/dynamic-help</documentation>
   <resources>
     <resource>HelpTipPluginBootStrap</resource>
     <resource>UrlMappings</resource>
